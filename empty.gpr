@@ -1,7 +1,0 @@
-project Empty is
-
-   for Languages use ("C");
-   for Source_Dirs use ("./**");
-
-end Empty;
-
