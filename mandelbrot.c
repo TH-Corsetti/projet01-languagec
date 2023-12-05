@@ -18,8 +18,8 @@
 
 int mandelbrot(complexe_t z0, complexe_t c, double seuil, int maxit) {
   /** À COMPLÉTER **/
-  coucou je fais un test
-  test numero 2
+  coucou je fais un test test numero 2
+    test numero 3
 }
 
 
