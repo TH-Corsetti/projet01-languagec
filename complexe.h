@@ -3,6 +3,12 @@
 
 // Type utilisateur complexe_t
 /** À COMPLÉTER **/
+struct complexe_t {
+  float reelle;
+  float imaginaire;
+};
+
+typedef struct complexe_t complexe_t;
 
 // Fonctions reelle et imaginaire
 /**
@@ -10,14 +16,18 @@
  *
  * CONTRAT À COMPLÉTER
  */
+
 /** FONCTION À DÉCLARER **/
+float reelle (complexe_t z);
 
 /**
  * imaginaire
  *
  * CONTRAT À COMPLÉTER
  */
+
 /** FONCTION À DÉCLARER **/
+float imaginaire (complexe_t z);
 
 // Procédures set_reelle, set_imaginaire et init
 /**
@@ -26,6 +36,7 @@
  * CONTRAT À COMPLÉTER
  */
 /** PROCÉDURE À DÉCLARER **/
+void set_reelle (complexe_t z, float a);
 
 /**
  * set_imaginaire
@@ -33,6 +44,7 @@
  * CONTRAT À COMPLÉTER
  */
 /** PROCÉDURE À DÉCLARER **/
+void set_imaginaire(complexe_t z, float a);
 
 /**
  * init
@@ -40,6 +52,7 @@
  * CONTRAT À COMPLÉTER
  */
 /** PROCÉDURE À DÉCLARER **/
+void init(complexe_t z, float a, float b);
 
 // Procédure copie
 /**
@@ -152,6 +165,7 @@ void puissance(complexe_t* resultat, complexe_t op, int exposant);
  * CONTRAT À COMPLETER
  */
 /** FONCTION À DÉCLARER **/
+float module_carre (complexe_t z);
 
 /**
  * module
@@ -159,6 +173,7 @@ void puissance(complexe_t* resultat, complexe_t op, int exposant);
  * CONTRAT À COMPLETER
  */
 /** FONCTION À DÉCLARER **/
+float module(complexe_t z);
 
 /**
  * argument
@@ -166,6 +181,7 @@ void puissance(complexe_t* resultat, complexe_t op, int exposant);
  * CONTRAT À COMPLETER
  */
 /** FONCTION À DÉCLARER **/
+float argument(complexe_t);
 
 
 #endif // COMPLEXE_H
