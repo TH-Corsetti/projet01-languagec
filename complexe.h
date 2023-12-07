@@ -3,12 +3,12 @@
 
 // Type utilisateur complexe_t
 /** À COMPLÉTER **/
-struct complexe_t {
+struct complexe {
   float reelle;
   float imaginaire;
 };
 
-typedef struct complexe_t complexe_t;
+typedef struct complexe complexe_t;
 
 // Fonctions reelle et imaginaire
 /**
@@ -36,7 +36,7 @@ float imaginaire (complexe_t z);
  * CONTRAT À COMPLÉTER
  */
 /** PROCÉDURE À DÉCLARER **/
-void set_reelle (complexe_t z, float a);
+void set_reelle (complexe_t* z, float a);
 
 /**
  * set_imaginaire
@@ -44,7 +44,7 @@ void set_reelle (complexe_t z, float a);
  * CONTRAT À COMPLÉTER
  */
 /** PROCÉDURE À DÉCLARER **/
-void set_imaginaire(complexe_t z, float a);
+void set_imaginaire(complexe_t* z, float a);
 
 /**
  * init
@@ -52,7 +52,7 @@ void set_imaginaire(complexe_t z, float a);
  * CONTRAT À COMPLÉTER
  */
 /** PROCÉDURE À DÉCLARER **/
-void init(complexe_t z, float a, float b);
+void init(complexe_t* z, float a, float b);
 
 // Procédure copie
 /**
