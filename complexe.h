@@ -13,45 +13,71 @@ typedef struct complexe complexe_t;
 // Fonctions reelle et imaginaire
 /**
  * reelle
+ * Renvoie la partie réelle d'un complexe en argument
+ * 
+ * Paramètres :
+ *   z       [in] Complexe dont l'on veut la partie réelle
  *
- * CONTRAT À COMPLÉTER
+ * Post-conditions : le résultat est un réel
  */
 
-/** FONCTION À DÉCLARER **/
+
 float reelle (complexe_t z);
 
 /**
  * imaginaire
+ * Renvoie la partie imaginaire d'un complexe en argument
+ * 
+ * Paramètres :
+ *   z       [in] Complexe dont l'on veut la partie imaginaire
  *
- * CONTRAT À COMPLÉTER
+ * Post-conditions : le résultat est un réel
  */
 
-/** FONCTION À DÉCLARER **/
 float imaginaire (complexe_t z);
 
 // Procédures set_reelle, set_imaginaire et init
 /**
  * set_reelle
+ * Modifie la partie réelle du complexe donné en second argument par le réel donné
+ * en second argument
  *
- * CONTRAT À COMPLÉTER
+ * Paramètres :
+ *   z       [in/out] Complexe modifié
+ *   a           [in] Réel qui devient la partie réelle de z
+ *
+ * Post-conditions : reelle(z) = a
  */
-/** PROCÉDURE À DÉCLARER **/
+
 void set_reelle (complexe_t* z, float a);
 
 /**
  * set_imaginaire
+ * Modifie la partie imaginaire du complexe donné en second argument par le réel donné
+ * en second argument
  *
- * CONTRAT À COMPLÉTER
+ * Paramètres :
+ *   z       [in/out] Complexe modifié
+ *   a           [in] Réel qui devient la partie imaginaire de z
+ *
+ * Post-conditions : imaginaire(z) = a
  */
-/** PROCÉDURE À DÉCLARER **/
+
 void set_imaginaire(complexe_t* z, float a);
 
 /**
  * init
+ * Initialise le complexe donné en premier argument par les réels donnés
+ * en second et troisième arguments
  *
- * CONTRAT À COMPLÉTER
+ * Paramètres :
+ *   z          [out] Complexe initialisé
+ *   a           [in] Réel qui devient la partie réelle de z
+ *   b           [in] Réel qui devient la partie imaginaire de z
+ *
+ * Post-conditions : imaginaire(z) = b et reele(z) = a
  */
-/** PROCÉDURE À DÉCLARER **/
+
 void init(complexe_t* z, float a, float b);
 
 // Procédure copie
@@ -67,6 +93,7 @@ void init(complexe_t* z, float a, float b);
  * Pré-conditions : resultat non null
  * Post-conditions : resultat et autre ont les mêmes composantes
  */
+ 
 void copie(complexe_t* resultat, complexe_t autre);
 
 // Algèbre des nombres complexes
@@ -96,6 +123,7 @@ void conjugue(complexe_t* resultat, complexe_t op);
  * Pré-conditions : resultat non-null
  * Post-conditions : *resultat = gauche + droite
  */
+ 
 void ajouter(complexe_t* resultat, complexe_t gauche, complexe_t droite);
 
 /**
@@ -111,6 +139,7 @@ void ajouter(complexe_t* resultat, complexe_t gauche, complexe_t droite);
  * Pré-conditions : resultat non-null
  * Post-conditions : *resultat = gauche - droite
  */
+ 
 void soustraire(complexe_t* resultat, complexe_t gauche, complexe_t droite);
 
 /**
@@ -126,6 +155,7 @@ void soustraire(complexe_t* resultat, complexe_t gauche, complexe_t droite);
  * Pré-conditions : resultat non-null
  * Post-conditions : *resultat = gauche * droite
  */
+ 
 void multiplier(complexe_t* resultat, complexe_t gauche, complexe_t droite);
 
 /**
@@ -141,6 +171,7 @@ void multiplier(complexe_t* resultat, complexe_t gauche, complexe_t droite);
  * Pré-conditions : resultat non-null
  * Post-conditions : *resultat = op * facteur
  */
+ 
 void echelle(complexe_t* resultat, complexe_t op, double facteur);
 
 /**
@@ -156,31 +187,48 @@ void echelle(complexe_t* resultat, complexe_t op, double facteur);
  * Post-conditions : *resultat = op * op * ... * op
  *                                 { n fois }
  */
+ 
 void puissance(complexe_t* resultat, complexe_t op, int exposant);
 
 // Module et argument
 /**
  * module_carre
+ * Calcule le carré du module d'un complexe
  *
- * CONTRAT À COMPLETER
+ * Paramètres :
+ *   z       [in] Complexe dont l'on veut calculer le carré du module
+ *
+ * Post-conditions : module_carre(z) >= 0, et si z est non nul : module_carre(z) > 0
+ *
  */
-/** FONCTION À DÉCLARER **/
+
 float module_carre (complexe_t z);
 
 /**
  * module
+ * Calcule le module d'un complexe
  *
- * CONTRAT À COMPLETER
+ * Paramètres :
+ *   z       [in] Complexe dont l'on veut calculer le module
+ *
+ * Post-conditions : module(z) >= 0, et si z est non nul : module(z) > 0
+ *
  */
-/** FONCTION À DÉCLARER **/
+
 float module(complexe_t z);
 
 /**
  * argument
+ * Calcule l'argument d'un complexe
  *
- * CONTRAT À COMPLETER
+ * Paramètres :
+ *   z       [in] Complexe dont l'on veut calculer l'argument
+ *
+ * Pré-conditions : z est non nul
+ * Post-conditions : argument(z) est compris entre -pi et pi
+ *
  */
-/** FONCTION À DÉCLARER **/
+
 float argument(complexe_t);
 
 
