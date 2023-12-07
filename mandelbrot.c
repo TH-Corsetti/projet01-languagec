@@ -18,11 +18,12 @@
 
 int mandelbrot(complexe_t z0, complexe_t c, double seuil, int maxit) {
 
-  complexe_t z;
+  complexe_t* z;
   int i = 0;
-  init(&z, reelle(z0), imaginaire(z0);
-  while ((module(*z) <=:! seuil) && (i <= maxit)) {
-      ajouter (&z, multiplier (&z, *z, *z), *c);
+  init(z, reelle(z0), imaginaire(z0));
+  while ((module (*z) <= seuil) && (i <= maxit)) {
+      multiplier(z, *z, *z);
+      ajouter (z, *z, c);
       i++;
     }
   return i;
