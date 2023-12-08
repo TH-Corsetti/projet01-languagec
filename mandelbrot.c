@@ -19,7 +19,7 @@
 int mandelbrot(complexe_t z0, complexe_t c, double seuil, int maxit) {
 
   int i = 1;
-  complexe_t* z;
+  complexe_t* z = &z0;
   copie(z,z0);
   while ((module(*z) < seuil) && (i <= maxit)) {
       puissance(z,*z,2);
