@@ -94,27 +94,5 @@ double module (complexe_t z) {
 
 
 double argument (complexe_t z) {
-  double theta;
-  if (imaginaire(z) == 0){
-    if (reelle(z) >0){
-      theta = 0;
-    } else{
-      theta = M_PI;
-    } 
-  } else if (reelle(z)>0) {
-      theta = atanf (imaginaire(z) / reelle(z));
-  } else if (reelle(z)<0) {
-      if (imaginaire(z) > 0) {
-        theta = atanf (imaginaire(z) / reelle(z)) + M_PI;
-      } else {
-        theta = atanf (z.imaginaire / z.reelle) - M_PI;
-      } 
-  } else if (z.reelle == 0) {
-        if (z.imaginaire > 0) {
-           theta = M_PI / 2;
-         } else {
-           theta = -M_PI / 2;
-      } 
-  }
-  return theta;
+  return 2 * atan(imaginaire(z)/(reelle(z) + module(z)));
 }
